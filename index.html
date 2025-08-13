@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio • Lâm Quốc</title>
+  <meta name="description" content="Portfolio cá nhân: Trang chủ, Thông tin, Kỹ năng, Dự án, Liên hệ" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="Portfolio • Lâm Quốc" />
+  <meta property="og:description" content="Portfolio cá nhân hiện đại, mượt mà." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <!-- Progress bar -->
+  <div id="progress"></div>
+
+  <!-- Header / Navbar -->
+  <header class="site-header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Trang chủ">
+        <img src="assets/img/logo.svg" alt="Logo" width="28" height="28" />
+        <span>Lâm Quốc</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Chính">
+        <a href="#home" class="nav-link active">Trang chủ</a>
+        <a href="#about" class="nav-link">Thông tin</a>
+        <a href="#skills" class="nav-link">Kỹ năng</a>
+        <a href="#projects" class="nav-link">Dự án</a>
+        <a href="#contact" class="nav-link">Liên hệ</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn-ghost" id="theme-toggle" aria-label="Đổi chế độ sáng/tối">
+          <!-- moon/sun icon injected by JS -->
+          <span class="sr-only">Đổi chủ đề</span>
+        </button>
+        <button class="btn-ghost" id="mobile-toggle" aria-label="Mở menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <a href="#home" class="drawer-link">Trang chủ</a>
+      <a href="#about" class="drawer-link">Thông tin</a>
+      <a href="#skills" class="drawer-link">Kỹ năng</a>
+      <a href="#projects" class="drawer-link">Dự án</a>
+      <a href="#contact" class="drawer-link">Liên hệ</a>
+    </div>
+  </header>
+
+  <!-- Hero / Home -->
+  <section id="home" class="section hero section-dark" data-theme="dark">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob b1" data-parallax></span>
+      <span class="blob b2" data-parallax></span>
+      <span class="ring r1" data-parallax></span>
+      <span class="ring r2" data-parallax></span>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Xin chào, mình là</p>
+        <h1 class="headline gradient-text">
+          Nguyễn Lê Quốc Lâm
+          <span class="role-rotate" aria-hidden="true">
+            <span>• Full‑Stack</span>
+            <span>• Frontend</span>
+            <span>• Backend</span>
+          </span>
+        </h1>
+        <p class="subhead">
+          Mình xây dựng các sản phẩm web <b>nhanh</b>, <b>mượt</b> và <b>đẹp</b> — từ UI/UX tới kiến trúc phía sau,
+          chú trọng trải nghiệm, hiệu năng và clean code.
+        </p>
+        <div class="cta">
+          <a href="#projects" class="btn-primary">Xem dự án</a>
+          <a href="#contact" class="btn-outline">Liên hệ</a>
+        </div>
+        <ul class="hero-chips">
+          <li data-parallax>TypeScript</li>
+          <li data-parallax>React</li>
+          <li data-parallax>.NET</li>
+          <li data-parallax>SQL</li>
+          <li data-parallax>REST API</li>
+        </ul>
+        <ul class="quick-stats">
+          <li><strong>3+</strong> dự án học thuật</li>
+          <li><strong>1+</strong> năm tự học</li>
+          <li><strong>UI/UX</strong> • Hiệu năng • MVC</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal" data-parallax>
+        <svg viewBox="0 0 500 500" width="100%" height="100%" role="img" aria-label="Minh họa sản phẩm">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop stop-color="var(--primary)" offset="0" />
+              <stop stop-color="var(--primary-2)" offset="1" />
+            </linearGradient>
+          </defs>
+          <rect x="20" y="20" width="460" height="460" rx="28" fill="url(#g1)" opacity="0.12" />
+          <g stroke="url(#g1)" stroke-width="3" fill="none">
+            <rect x="80" y="80" width="340" height="220" rx="12" />
+            <circle cx="120" cy="120" r="10" />
+            <circle cx="150" cy="120" r="10" />
+            <circle cx="180" cy="120" r="10" />
+            <path d="M100 160h300M100 190h220M100 220h260M100 250h180" stroke-linecap="round" />
+            <rect x="120" y="330" width="260" height="60" rx="10" />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <a class="scroll-hint" href="#about" aria-label="Cuộn xuống phần thông tin">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section-light" data-theme="light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Thông tin</h2>
+        <p class="section-desc">Một chút về mình và hành trình theo đuổi lập trình.</p>
+      </div>
+
+      <div class="card about-card reveal">
+        <div class="about-grid">
+          <div>
+            <h3>Mục tiêu</h3>
+            <p>Mình muốn trở thành lập trình viên Full‑Stack, tập trung vào hiệu năng, UX tốt và clean code. Ưa thích
+              TypeScript, .NET, SQL và kiến trúc MVC.</p>
+            <ul class="list">
+              <li>Học & áp dụng <b>Thiết kế hệ thống</b>, CI/CD, kiểm thử.</li>
+              <li>Đóng góp các dự án mã nguồn mở.</li>
+              <li>Xây dựng sản phẩm nhỏ phục vụ cộng đồng.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Thông tin nhanh</h3>
+            <ul class="meta">
+              <li><span>Trường:</span> Đại học Đà Lạt</li>
+              <li><span>Hướng:</span> Web Full‑Stack</li>
+              <li><span>Sở thích:</span> UI/UX, tối ưu hiệu năng, đọc docs</li>
+              <li><span>Liên hệ:</span> <a href="#contact">Gửi lời nhắn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section-light" data-theme="light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Kỹ năng</h2>
+        <p class="section-desc">Các ngôn ngữ và công cụ mình sử dụng</p>
+      </div>
+
+      <div class="skills3-columns reveal">
+        <article class="skills3-card">
+          <h3 class="skills3-title">Languages</h3>
+          <div class="skills3-grid">
+            <div class="skill3-item"><img src="assets/icons/c-.png" alt="C"><span class="skill3-name">C</span></div>
+            <div class="skill3-item"><img src="assets/icons/c-sharp.png" alt="C#"><span class="skill3-name">C#</span>
+            </div>
+            <div class="skill3-item"><img src="assets/icons/java.png" alt="Java"><span class="skill3-name">Java</span>
+            </div>
+            <div class="skill3-item"><img src="assets/icons/js.png" alt="JavaScript"><span
+                class="skill3-name">JavaScript</span></div>
+            <div class="skill3-item"><img src="assets/icons/python.png" alt="Python"><span
+                class="skill3-name">Python</span></div>
+          </div>
+        </article>
+
+        <article class="skills3-card">
+          <h3 class="skills3-title">Frameworks & Platforms</h3>
+          <div class="skills3-grid">
+            <div class="skill3-item"><img src="assets/icons/dotnet.png" alt=".NET"><span class="skill3-name">.NET</span>
+            </div>
+            <div class="skill3-item"><img src="assets/icons/nodejs.png" alt="Node.js"><span
+                class="skill3-name">Node.js</span></div>
+          </div>
+        </article>
+
+        <article class="skills3-card">
+          <h3 class="skills3-title">Web & Database</h3>
+          <div class="skills3-grid">
+            <div class="skill3-item"><img src="assets/icons/html.png" alt="HTML5"><span class="skill3-name">HTML5</span>
+            </div>
+            <div class="skill3-item"><img src="assets/icons/css-3.png" alt="CSS3"><span class="skill3-name">CSS3</span>
+            </div>
+            <div class="skill3-item"><img src="assets/icons/mysql.png" alt="MySQL"><span
+                class="skill3-name">MySQL</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects -->
+  <section id="projects" class="section section-light" data-theme="light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Dự án</h2>
+        <p class="section-desc">Một số dự án tiêu biểu mình đã làm trong môn học/đồ án.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card project reveal">
+          <img src="assets/img/p1.svg" alt="Project 1" class="project-cover" width="480" height="320" loading="lazy" />
+          <div class="project-body">
+            <h3>Website bán điện thoại (MVC)</h3>
+            <p>Hệ thống thương mại điện tử cơ bản: quản lý sản phẩm, giỏ hàng, đơn hàng, phân quyền.</p>
+            <div class="tags">
+              <span>.NET</span><span>EF Core</span><span>Razor</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn-text">Xem mã nguồn</a>
+              <a href="#" class="btn-text">Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project reveal delay-50">
+          <img src="assets/img/p2.svg" alt="Project 2" class="project-cover" width="480" height="320" loading="lazy" />
+          <div class="project-body">
+            <h3>Blog cá nhân tĩnh</h3>
+            <p>Blog xây dựng bằng HTML/CSS/JS và Tailwind, có dark mode, tối ưu SEO cơ bản.</p>
+            <div class="tags">
+              <span>HTML</span><span>Tailwind</span><span>Vanilla JS</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn-text">Xem mã nguồn</a>
+              <a href="#" class="btn-text">Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project reveal delay-100">
+          <img src="assets/img/p3.svg" alt="Project 3" class="project-cover" width="480" height="320" loading="lazy" />
+          <div class="project-body">
+            <h3>Ứng dụng Android Chat</h3>
+            <p>Ứng dụng nhắn tin cơ bản với đăng nhập, danh bạ, chat 1‑1. Kiến trúc MVVM.</p>
+            <div class="tags">
+              <span>Android</span><span>Room</span><span>MVVM</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn-text">Xem mã nguồn</a>
+              <a href="#" class="btn-text">Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-dark" data-theme="dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Liên hệ</h2>
+        <p class="section-desc">Bạn có ý tưởng hoặc muốn cộng tác? Hãy gửi lời nhắn!</p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="card form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Họ và tên</label>
+            <input id="name" name="name" type="text" required placeholder="Nhập họ và tên" />
+            <small class="error">Vui lòng nhập tên.</small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="ví dụ: ban@vidu.com" />
+            <small class="error">Email chưa đúng định dạng.</small>
+          </div>
+          <div class="field">
+            <label for="message">Nội dung</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Mình muốn trao đổi về..."></textarea>
+            <small class="error">Vui lòng nhập nội dung.</small>
+          </div>
+          <button class="btn-primary" type="submit">Gửi</button>
+          <p class="form-note">* Form demo — bạn có thể cấu hình Formspree/EmailJS sau.</p>
+        </form>
+
+        <div class="card contact-info reveal delay-50">
+          <h3>Thông tin</h3>
+          <ul class="info">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 10c0 5-9 12-9 12S3 15 3 10a9 9 0 1 1 18 0Z" fill="none" stroke="currentColor"
+                  stroke-width="2" />
+                <circle cx="12" cy="10" r="3" fill="currentColor" />
+              </svg>
+              Đà Lạt, Việt Nam
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Open to internship/freelance
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M7 7h10v10H7z" fill="currentColor" />
+              </svg>
+              Portfolio cập nhật thường xuyên
+            </li>
+          </ul>
+          <div class="socials">
+            <a href="#" aria-label="GitHub" class="icon-link">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 0 0-3 19.5c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.5 1.1 3.1.9.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.2-4.7-5.3 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 .9a10.3 10.3 0 0 1 5.5 0c2.1-1.2 3-.9 3-.9.6 1.6.2 2.8.1 3.1.7.8 1.1 1.7 1.1 2.9 0 4.1-2.4 5-4.7 5.3.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="icon-link">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h3v13H3zm5 0h3v2h.1a3.3 3.3 0 0 1 3-1.7c3.2 0 3.8 2.1 3.8 4.9V21h-3v-6c0-1.4 0-3.2-2-3.2s-2.3 1.6-2.3 3.1V21H8z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="icon-link">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M13 21v-8h3l1-3h-4V8c0-.9.4-1.5 1.6-1.5H17V3.2c-.8-.1-1.7-.2-2.5-.2C12 3 10 4.7 10 7.6V10H7v3h3v8h3Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container foot">
+      <p>© <span id="y"></span> • Lâm Quốc • Làm với ❤️ và Vanilla JS</p>
+      <a href="#home" class="to-top" aria-label="Lên đầu trang">↑</a>
+    </div>
+  </footer>
+</body>
+
+</html>
