@@ -63,65 +63,57 @@
   </header>
 
   <!-- Hero / Home -->
-  <section id="home" class="section hero section-dark" data-theme="dark">
+  <section id="home" class="hero section" data-theme="light">
+    <!-- NỀN GRADIENT MỀM -->
     <div class="hero-bg" aria-hidden="true">
-      <span class="blob b1" data-parallax></span>
-      <span class="blob b2" data-parallax></span>
-      <span class="ring r1" data-parallax></span>
-      <span class="ring r2" data-parallax></span>
+      <span class="blob b1"></span>
+      <span class="blob b2"></span>
+      <span class="ring r1"></span>
+      <span class="ring r2"></span>
     </div>
 
-    <div class="container hero-grid">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Xin chào, mình là</p>
-        <h1 class="headline gradient-text">
-          Nguyễn Lê Quốc Lâm
-          <span class="role-rotate" aria-hidden="true">
-            <span>• Full‑Stack</span>
-            <span>• Frontend</span>
-            <span>• Backend</span>
-          </span>
-        </h1>
-        <p class="subhead">
-          Mình xây dựng các sản phẩm web <b>nhanh</b>, <b>mượt</b> và <b>đẹp</b> — từ UI/UX tới kiến trúc phía sau,
-          chú trọng trải nghiệm, hiệu năng và clean code.
-        </p>
-        <div class="cta">
-          <a href="#projects" class="btn-primary">Xem dự án</a>
-          <a href="#contact" class="btn-outline">Liên hệ</a>
-        </div>
-        <ul class="hero-chips">
-          <li data-parallax>TypeScript</li>
-          <li data-parallax>React</li>
-          <li data-parallax>.NET</li>
-          <li data-parallax>SQL</li>
-          <li data-parallax>REST API</li>
-        </ul>
-        <ul class="quick-stats">
-          <li><strong>3+</strong> dự án học thuật</li>
-          <li><strong>1+</strong> năm tự học</li>
-          <li><strong>UI/UX</strong> • Hiệu năng • MVC</li>
-        </ul>
-      </div>
+    <div class="container">
+      <div class="hero-inner">
+        <img src="assets/img/avt.jpg" alt="Ảnh đại diện Nguyễn Lê Quốc Lâm" class="avatar" />
 
-      <div class="hero-visual reveal" data-parallax>
-        <svg viewBox="0 0 500 500" width="100%" height="100%" role="img" aria-label="Minh họa sản phẩm">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop stop-color="var(--primary)" offset="0" />
-              <stop stop-color="var(--primary-2)" offset="1" />
-            </linearGradient>
-          </defs>
-          <rect x="20" y="20" width="460" height="460" rx="28" fill="url(#g1)" opacity="0.12" />
-          <g stroke="url(#g1)" stroke-width="3" fill="none">
-            <rect x="80" y="80" width="340" height="220" rx="12" />
-            <circle cx="120" cy="120" r="10" />
-            <circle cx="150" cy="120" r="10" />
-            <circle cx="180" cy="120" r="10" />
-            <path d="M100 160h300M100 190h220M100 220h260M100 250h180" stroke-linecap="round" />
-            <rect x="120" y="330" width="260" height="60" rx="10" />
-          </g>
-        </svg>
+        <h1 class="hero-title">
+          <span class="name-accent">Nguyễn Lê Quốc Lâm</span>
+        </h1>
+
+        <p class="hero-desc">
+          Sinh viên <strong>Khoa Công nghệ Thông tin</strong> — Chuyên ngành Kỹ thuật phần mềm
+          <br>
+          Trường <strong>Đại học Đà Lạt</strong>
+        </p>
+
+        <div class="actions">
+          <a href="#projects" class="btn btn-primary">Xem dự án</a>
+          <a href="#contact" class="btn btn-ghost">Liên hệ</a>
+        </div>
+
+        <div class="socials">
+          <a href="#" aria-label="GitHub" class="icon-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2a10 10 0 0 0-3 19.5c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.5 1.1 3.1.9.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.2-4.7-5.3 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 .9a10.3 10.3 0 0 1 5.5 0c2.1-1.2 3-.9 3-.9.6 1.6.2 2.8.1 3.1.7.8 1.1 1.7 1.1 2.9 0 4.1-2.4 5-4.7 5.3.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="icon-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h3v13H3zm5 0h3v2h.1a3.3 3.3 0 0 1 3-1.7c3.2 0 3.8 2.1 3.8 4.9V21h-3v-6c0-1.4 0-3.2-2-3.2s-2.3 1.6-2.3 3.1V21H8z"
+                fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="icon-link">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M13 21v-8h3l1-3h-4V8c0-.9.4-1.5 1.6-1.5H17V3.2c-.8-.1-1.7-.2-2.5-.2C12 3 10 4.7 10 7.6V10H7v3h3v8h3Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -131,6 +123,7 @@
       </svg>
     </a>
   </section>
+
 
   <!-- About -->
   <section id="about" class="section section-light" data-theme="light">
@@ -156,8 +149,8 @@
             <h3>Thông tin nhanh</h3>
             <ul class="meta">
               <li><span>Trường:</span> Đại học Đà Lạt</li>
-              <li><span>Hướng:</span> Web Full‑Stack</li>
-              <li><span>Sở thích:</span> UI/UX, tối ưu hiệu năng, đọc docs</li>
+              <li><span>Hướng:</span> Web Back-end</li>
+              <li><span>Sở thích:</span> Code, ăn uống, ngủ nghỉ</li>
               <li><span>Liên hệ:</span> <a href="#contact">Gửi lời nhắn</a></li>
             </ul>
           </div>
