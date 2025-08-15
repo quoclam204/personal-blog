@@ -1369,7 +1369,7 @@ html {
 
 /* Thẻ item bên trong */
 .skill3-item {
-  border: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
+  border: 2px solid color-mix(in oklab, var(--border) 80%, transparent);
   background: color-mix(in oklab, var(--card) 94%, transparent);
 }
 
@@ -1481,24 +1481,29 @@ html {
 
 
 /* === HERO (centered avatar + giữ nền blob xanh-tím) === */
-.hero{
+.hero {
   position: relative;
   min-height: calc(100vh - var(--header-h));
   display: grid;
   align-items: center;
   overflow: clip;
-  background: transparent !important; /* để thấy hero-bg */
+  background: transparent !important;
+  /* để thấy hero-bg */
 }
 
-.hero-bg{ 
-  position: absolute; inset:0; pointer-events:none; 
-  z-index: 0; /* nền ở dưới */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  /* nền ở dưới */
   /* (các rule .blob/.ring của bạn đã có ở trên, giữ nguyên) */
 }
 
-.hero-inner{
+.hero-inner {
   position: relative;
-  z-index: 2;           /* nội dung nổi lên trên nền */
+  z-index: 2;
+  /* nội dung nổi lên trên nền */
   max-width: 820px;
   margin: 0 auto;
   text-align: center;
@@ -1511,15 +1516,16 @@ html {
   height: clamp(160px, 22vw, 240px);
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid rgba(255,255,255,.7);
-  box-shadow: 0 10px 30px rgba(2,6,23,.25);
+  border: 4px solid rgba(255, 255, 255, .7);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, .25);
   display: block;
-  margin: 0 auto 24px; /* thêm chút khoảng cách dưới */
+  margin: 0 auto 24px;
+  /* thêm chút khoảng cách dưới */
 }
 
 
 /* Tiêu đề + giữ hiệu ứng/màu xanh tên */
-.hero-title{
+.hero-title {
   font-size: clamp(28px, 4.2vw, 44px);
   line-height: 1.2;
   margin: 6px 0 10px;
@@ -1527,7 +1533,7 @@ html {
   font-weight: 700;
 }
 
-.name-accent{
+.name-accent {
   color: var(--primary);
   background: linear-gradient(90deg, var(--primary), var(--primary-2));
   -webkit-background-clip: text;
@@ -1536,7 +1542,7 @@ html {
 }
 
 /* Mô tả */
-.hero-desc{
+.hero-desc {
   color: var(--muted);
   font-size: clamp(15px, 2vw, 18px);
   max-width: 720px;
@@ -1544,64 +1550,79 @@ html {
 }
 
 /* Nút dưới mô tả */
-.actions{
+.actions {
   display: inline-flex;
   gap: 12px;
   margin-top: 8px;
 }
 
 /* Button styles tái sử dụng */
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  height:44px; padding:0 18px; border-radius: var(--radius);
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
-  font-weight:600; text-decoration:none;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.btn-primary{
+.btn-primary {
   background: linear-gradient(90deg, var(--primary), var(--primary-2));
-  color:#fff !important;   /* chữ trắng trong hero */
-  border:none;
+  color: #fff !important;
+  /* chữ trắng trong hero */
+  border: none;
 }
 
-.btn-ghost{
+.btn-ghost {
   background: var(--bg-elev);
   color: var(--text);
 }
 
 /* Scroll hint luôn nổi trên blob */
-.scroll-hint{ z-index: 2; }
+.scroll-hint {
+  z-index: 2;
+}
 
 /* Tối ưu khoảng cách tổng thể hero (đang có #home.section quản lý height) */
-#home.section{
+#home.section {
   padding-top: 24px !important;
   padding-bottom: 64px;
 }
 
 /* Mobile tên dài: giảm nhẹ cỡ chữ */
-@media (max-width:420px){
-  .hero-title{ font-size: 26px; }
+@media (max-width:420px) {
+  .hero-title {
+    font-size: 26px;
+  }
 }
 
 /* Căn giữa và cách xuống một chút */
 .hero-inner .socials {
   display: flex;
-  justify-content: center; /* căn giữa */
+  justify-content: center;
+  /* căn giữa */
   gap: 0.5rem;
-  margin-top: 20px; /* khoảng cách xuống dưới */
+  margin-top: 20px;
+  /* khoảng cách xuống dưới */
 }
 
 /* ===== Hero: căn giữa & cách đều các khối ===== */
 :root {
-  --hero-gap: clamp(12px, 2.4vw, 22px);      /* khoảng cách chung */
-  --hero-gap-lg: clamp(14px, 3vw, 28px);     /* nếu muốn khối lớn thoáng hơn */
+  --hero-gap: clamp(12px, 2.4vw, 22px);
+  /* khoảng cách chung */
+  --hero-gap-lg: clamp(14px, 3vw, 28px);
+  /* nếu muốn khối lớn thoáng hơn */
 }
 
-.hero-inner{
+.hero-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: var(--hero-gap-lg);  /* tất cả khối cách đều */
+  row-gap: var(--hero-gap-lg);
+  /* tất cả khối cách đều */
   max-width: 820px;
   margin: 0 auto;
   text-align: center;
@@ -1609,18 +1630,21 @@ html {
 }
 
 /* Bỏ các margin cá nhân để gap quản hết spacing */
-.hero-inner .avatar{ 
-  margin: 0 auto;              /* bỏ margin-bottom 24px cũ */
+.hero-inner .avatar {
+  margin: 0 auto;
+  /* bỏ margin-bottom 24px cũ */
 }
+
 .hero-title,
 .hero-desc,
 .hero-inner .actions,
-.hero-inner .socials{
-  margin: 0;                   /* không để margin chồng lấn */
+.hero-inner .socials {
+  margin: 0;
+  /* không để margin chồng lấn */
 }
 
 /* Nút */
-.hero-inner .actions{
+.hero-inner .actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -1628,13 +1652,41 @@ html {
 }
 
 /* Mạng xã hội dưới cùng, căn giữa & đồng bộ khoảng cách */
-.hero-inner .socials{
+.hero-inner .socials {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
 /* Tùy chọn: trên màn nhỏ tăng nhẹ gap cho thoáng */
-@media (max-width: 420px){
-  :root { --hero-gap: 16px; --hero-gap-lg: 24px; }
+@media (max-width: 420px) {
+  :root {
+    --hero-gap: 16px;
+    --hero-gap-lg: 24px;
+  }
+}
+
+/* Light mode: input nền trắng, chữ đen */
+html.light .field input,
+html.light .field textarea {
+  background-color: #ffffff;
+  /* nền trắng */
+  color: #0f172a;
+  /* chữ đen */
+  border-color: #e2e8f0;
+  /* viền sáng */
+}
+
+/* Placeholder dễ đọc trong sáng */
+html.light .field input::placeholder,
+html.light .field textarea::placeholder {
+  color: #64748b;
+}
+
+/* Focus viền xanh nhẹ trong sáng */
+html.light .field input:focus,
+html.light .field textarea:focus {
+  background-color: #ffffff;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, .20);
 }
