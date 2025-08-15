@@ -1690,3 +1690,11 @@ html.light .field textarea:focus {
   border-color: #38bdf8;
   box-shadow: 0 0 0 3px rgba(56, 189, 248, .20);
 }
+
+.about-grid div:first-child p {
+  text-align: justify; /* Căn đều 2 bên */
+}
+.about-grid div:first-child ul {
+  text-align: justify; /* Nếu muốn căn đều cả danh sách */
+}
+
