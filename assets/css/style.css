@@ -1692,9 +1692,108 @@ html.light .field textarea:focus {
 }
 
 .about-grid div:first-child p {
-  text-align: justify; /* Căn đều 2 bên */
-}
-.about-grid div:first-child ul {
-  text-align: justify; /* Nếu muốn căn đều cả danh sách */
+  text-align: justify;
+  /* Căn đều 2 bên */
 }
 
+.about-grid div:first-child ul {
+  text-align: justify;
+  /* Nếu muốn căn đều cả danh sách */
+}
+
+/* ====== LIQUID GLASS NAVBAR (ultra frosted) ====== */
+
+/* Tùy biến nhanh qua biến */
+:root {
+  --glass-blur: 18px;         /* tăng nếu muốn mờ hơn nữa: 22–28px */
+  --glass-sat:  180%;
+  --glass-dark: color-mix(in oklab, var(--bg-elev) 38%, transparent); /* cực trong */
+  --glass-light: color-mix(in oklab, var(--bg-elev) 50%, transparent);
+  --glass-border: rgba(255,255,255,.12);   /* viền kính */
+  --glass-border-dark: rgba(255,255,255,.08);
+  --glass-glow: rgba(56,189,248,.08);      /* ánh xanh rất nhẹ */
+}
+
+/* Thân header: kính mờ, siêu trong */
+.site-header {
+  background: var(--glass-dark) !important;
+  backdrop-filter: saturate(var(--glass-sat)) blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: saturate(var(--glass-sat)) blur(var(--glass-blur)) !important;
+
+  /* bỏ kẻ dưới cứng; dùng viền kính siêu nhẹ + inner highlight */
+  border-bottom: 1px solid var(--glass-border-dark) !important;
+  box-shadow:
+    0 10px 30px rgba(2,6,23,.08),       /* bóng ngoài mềm */
+    inset 0 1px rgba(255,255,255,.06);  /* highlight mép trên (glass) */
+}
+
+/* Lớp ánh sáng + hạt noise mịn để cảm giác “glass” hơn */
+.site-header::before,
+.site-header::after {
+  content:"";
+  position:absolute; inset:0; pointer-events:none;
+  border-radius: inherit;
+}
+
+/* ánh sáng chéo rất nhẹ */
+.site-header::before {
+  background:
+    linear-gradient( to bottom right,
+      rgba(255,255,255,.10), transparent 45%),
+    radial-gradient(120% 60% at 0% -20%, var(--glass-glow), transparent 60%);
+  mix-blend-mode: screen;
+  opacity:.7;
+}
+
+/* noise siêu mịn (không ảnh, chỉ pattern) */
+.site-header::after {
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.06) 1px, transparent 1px),
+    radial-gradient(1px 1px at 80% 70%, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 36px 36px, 42px 42px;
+  opacity:.25;
+}
+
+/* Khi chuyển trạng thái (over dark/light hoặc scrolled) vẫn giữ trong suốt */
+.site-header[data-over="dark"],
+.site-header[data-over="light"],
+.site-header.scrolled {
+  background: var(--glass-dark) !important;
+  border-bottom-color: var(--glass-border-dark) !important;
+  box-shadow:
+    0 10px 30px rgba(2,6,23,.10),
+    inset 0 1px rgba(255,255,255,.06) !important;
+}
+
+/* Light mode: giữ cảm giác kính trong trắng hơn một chút */
+html.light .site-header,
+html.light .site-header[data-over="light"],
+html.light .site-header.scrolled {
+  background: var(--glass-light) !important;
+  border-bottom-color: var(--glass-border) !important;
+  box-shadow:
+    0 10px 30px rgba(15,23,42,.06),
+    inset 0 1px rgba(255,255,255,.18) !important;
+}
+
+/* Nav: bỏ hoàn toàn underline & nền pill, chỉ đổi màu chữ */
+.nav-link::after { display:none !important; }
+.nav-link {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--muted);
+  transition: color .2s ease, text-shadow .2s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text);
+  text-shadow: 0 0 1px rgba(255,255,255,.15); /* cảm giác sáng trên kính */
+}
+
+/* Drawer mobile: đồng bộ kính */
+.drawer {
+  backdrop-filter: saturate(var(--glass-sat)) blur(calc(var(--glass-blur) - 2px));
+  -webkit-backdrop-filter: saturate(var(--glass-sat)) blur(calc(var(--glass-blur) - 2px));
+  background: var(--glass-dark) !important;
+  border-bottom: 1px solid var(--glass-border-dark) !important;
+}
